@@ -4,7 +4,7 @@
 body {
   font-size: 1.2em;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  margin: 50px;
+  margin: 5px;
 }
 a {
    background-color: rgb(0,200,200);
@@ -43,3 +43,64 @@ footer {
     text-align: center;
     padding: 8px;
 }
+
+/* MAIN BODY
+====================================*/
+.main-cont {
+	
+}
+.intro-cont {
+	height: 500px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.treeHouse-projects-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+	margin: 0 12px;
+}
+.treeHouse-projects-list li {
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+li:nth-child(odd) {
+	background-color: #eee;
+}
+.vid-cont {
+	display: inline-block;
+	float: left;
+	margin-right: 6em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
