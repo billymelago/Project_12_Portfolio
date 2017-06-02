@@ -279,8 +279,8 @@ nav {
 	transition: all .5s;
 }
 .accordion-wrap .accordion .active {
-	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg);
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
 }
 
 
@@ -299,7 +299,7 @@ nav {
 	margin: 1em auto;
 	width: 75%;
 	height: 175px;
-	background-image: url("../assets/screenshots/forms/full-page.png");
+	background-image: url("/assets/screenshots/forms/full-page.png");
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: 180%;

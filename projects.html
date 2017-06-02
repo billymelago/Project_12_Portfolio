@@ -42,7 +42,7 @@
 					<!--<img src="assets/screenshots/forms/full-page.png" alt="Screenshot" width="150px">-->
 				</div>
 				<div class="accordion-wrap">
-				<h2 class="accordion">More Info<i class="fa fa-lg fa-plus-circle" aria-hidden="true"></i></h2>
+				<h2 class="accordion more-info">More Info<i class="fa fa-lg fa-plus-circle" aria-hidden="true"></i></h2>
 					<div>
 						<div class="panel accordion-content">
 							<p>Web forms appear <strong>everywhere</strong> online. It's an <em>essential</em> skill to have in your Front End toolbox. Forms allow users to order books, sign up for web sites, and post to Facebook.</p>
@@ -138,8 +138,23 @@
 	});
 	
 	$('.accordion').click(function() {
-		$(this).find($(".fa")).toggleClass('active');
-		$(this).find($(".fa")).toggleClass('fa-plus-circle fa-minus-circle');
+		$('h4').find($('.fa')).removeClass('active');
+		//if has active
+		if($(this).hasClass('ui-accordion-header-active')) {
+			$(this).find($(".fa")).addClass('active');
+		} else if($(this).hasClass('more-info')) {
+				 	$(this).find($(".fa")).toggleClass('active');
+					
+				  } else if($(this).hasClass('more-info ui-accordion-header-collapsed')) {
+					$('h4').find($('.accordion-toggle')).toggleClass('ui-accordion-header-active ui-accordion-header-actcollapsedive');  
+				  }
+		
+		//remove active
+		//else add active
+		//$('.fa').removeClass('active');	
+		//$(this).find($(".fa")).toggleClass('active');
+		//$(this).find($(".fa")).toggleClass('fa-plus-circle fa-minus-circle');
+
 	});
 </script>
 
