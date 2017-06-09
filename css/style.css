@@ -8,8 +8,8 @@ body {
   	margin: 0;
 	background-color: #d8d8d8;
 	background: #d8d8d8; /* Old Browsers */ /*Safari 5.1-6*/ /*Opera 11.1-12*/ /*Fx 3.6-15*/
-background: -webkit-gradient(linear, right top, left bottom, from(#99dba0), to(#d8d8d8));
-background: linear-gradient(to bottom left, #99dba0, #d8d8d8);/* Standard*/
+	background: -webkit-gradient(linear, right top, left bottom, from(#99dba0), to(#d8d8d8));
+	background: linear-gradient(to bottom left, #99dba0, #d8d8d8);/* Standard*/
 }
 a {
    	background-color: #E5EDF3;
@@ -72,8 +72,8 @@ nav {
 	height: 100vh;
 	background-color: #969696;
 	background: #d8d8d8;
-	background: -webkit-gradient(linear, right top, left bottom, from(rgba(153,219,160,.99)), to(rgba(255,255,255,.80)));
-	background: linear-gradient(to bottom left, rgba(153,219,160,.99), rgba(255,255,255,.80));
+	background: -webkit-gradient(linear, right top, left bottom, from(rgba(153,219,160,1)), to(rgba(255,255,255,1)));
+	background: linear-gradient(to bottom left, rgba(153,219,160,1), rgba(255,255,255,1));
 }
 .nav-links {
 	padding: 2em;
@@ -152,7 +152,9 @@ nav {
 	font-family: 'Kaushan Script', cursive;
 	font-size: 1.8em;
 	color: #344037;
-	background-color: #d8d8d8;
+	background-color: #fff;
+	border-radius: 50%;
+	border: solid 4px; 
 }
 
 
@@ -214,6 +216,14 @@ nav {
 	max-width: 100%;
 	margin: 70px auto 0;
 	padding: 0 .6em;
+}
+.scroll-text {
+	display: block;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	text-align: center;
+	letter-spacing: 6px;
 }
 .down-arrow a  {
 	background-color: transparent;
@@ -395,8 +405,13 @@ h2 span {
 
 
 
-
-
+/* PROJECTS PAGE
+====================================*/
+@media only screen and (max-device-width: 1024px) {
+    .projects-intro {
+        background-attachment: scroll;
+    }
+}
 
 
 
