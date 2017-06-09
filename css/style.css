@@ -6,7 +6,10 @@ body {
   	font-size: 16px;
   	font-family: 'Lato' sans-serif;
   	margin: 0;
-	background-color: #EDEFF0;
+	background-color: #d8d8d8;
+	background: #d8d8d8; /* Old Browsers */ /*Safari 5.1-6*/ /*Opera 11.1-12*/ /*Fx 3.6-15*/
+background: -webkit-gradient(linear, right top, left bottom, from(#99dba0), to(#d8d8d8));
+background: linear-gradient(to bottom left, #99dba0, #d8d8d8);/* Standard*/
 }
 a {
    	background-color: #E5EDF3;
@@ -67,7 +70,10 @@ nav {
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background-color: #ccc;
+	background-color: #969696;
+	background: #d8d8d8;
+	background: -webkit-gradient(linear, right top, left bottom, from(rgba(153,219,160,.99)), to(rgba(255,255,255,.80)));
+	background: linear-gradient(to bottom left, rgba(153,219,160,.99), rgba(255,255,255,.80));
 }
 .nav-links {
 	padding: 2em;
@@ -91,6 +97,10 @@ nav {
 }
 .nav-links li>a {
 	font-family: 'Roboto', sans-serif;
+	color: #344037;
+	background-color: transparent;
+	display: block;
+	width: 100%;
 }
 .menu-container {
 	z-index: 1000;
@@ -136,10 +146,13 @@ nav {
 	height: 60px;
 	z-index: 1;
 }
+
 .logo a {
 	margin: 5px;
 	font-family: 'Kaushan Script', cursive;
 	font-size: 1.8em;
+	color: #344037;
+	background-color: #d8d8d8;
 }
 
 
@@ -160,6 +173,9 @@ nav {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
+	border-bottom: solid 4px #fff;
+	background: -webkit-gradient(linear, left top, right bottom, from(rgba(153,219,160,1)), to(rgba(255,255,255,1)));
+	background: linear-gradient(to bottom right, rgba(153,219,160,1), rgba(255,255,255,1));
 }
 .slide-out {
 	display: none;
@@ -187,6 +203,7 @@ nav {
 }
 .hero img {
 	border-radius: 50%;
+	border: solid 6px #fff;
 }
 
 
@@ -194,8 +211,9 @@ nav {
 /* PROJECTS PAGE
 ====================================*/
 #projects ol {
-	max-width: 90%;
+	max-width: 100%;
 	margin: 70px auto 0;
+	padding: 0 .6em;
 }
 .down-arrow a  {
 	background-color: transparent;
@@ -221,6 +239,8 @@ nav {
 	z-index: 0;
 	height: 100vh;
 	background-color: rgba(255,255,255,.2);
+	background: -webkit-gradient(linear, right top, left bottom, from(rgba(95,207,128,.5)), to(rgba(255,255,255,1)));
+	background: linear-gradient(to bottom left, rgba(95,207,128,.5), rgba(255,255,255,1));
 }
 .projects-intro {
 	height: 100vh;
@@ -282,24 +302,20 @@ nav {
 	-webkit-transform: rotate(135deg);
 	transform: rotate(135deg);
 }
-
-
 .accordion-wrap .ui-accordion-content {
 	padding: .5em;
 	border: none;
 }
-
 .fa {
-	position: absolute;
-	right: .8em;
+	float: right;
+	text-align: center;
 }
-
 .screenshot {
 	border: solid 2px #c3c3c3;
 	margin: 1em auto;
 	width: 75%;
 	height: 175px;
-	background-image: url("/assets/screenshots/forms/full-page.png");
+	background-image: url("../assets/screenshots/forms/full-page.png");
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: 180%;
@@ -314,7 +330,7 @@ nav {
     flex-flow: row wrap;
 	margin: 80px auto 0;
 }
-.treeHouse-projects-list li {
+.treeHouse-projects-list li[data-aos] {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -328,18 +344,23 @@ nav {
 	padding: 5px 10px 10px;
 	background-color: #fff;
 	border-radius: 8px;
+	-webkit-box-shadow: 5px 5px 15px 0px rgba(150, 150, 150, .4);
+	box-shadow: 5px 5px 15px 0px rgba(150, 150, 150, .4);
 }
-.description-cont {
-	background-color: #fff;
-	margin-top: 5px;
-	border-radius: 4px;
+.panel {
+	opacity: 0;
+	border-top: solid thin;
+	-webkit-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+.panel-active {
+	opacity: 1;
 }
 h2 span {
-	font-size: 16px;
+	line-height: 2;
 }
 .icon-done {
 	display: inline-block;
-	margin-right: 6px;
 	width: 28px;
 	height: 28px;
 	background-size: 100%;

@@ -44,6 +44,13 @@ $('.nav-links li a').click(function(e) {
 	$('.menu-container').toggleClass("change");
 });
 
+$('#nav-projects').accordion({
+	collapsible: "true",
+	active: "false",
+	heightStyle: "content",
+	icons: false
+});
+
 
 
 

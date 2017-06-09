@@ -1,8 +1,9 @@
 <div class="projects-intro">
 	<div class="projects-back">
 		<div class="projects-text">
-			<h2>I completed these projects while enrolled in Treehouse's Techdegree, Front End Web Development Course<img src="assets/icons/svg-icons/treehouse.svg" alt="Treehouse Logo" width="32px"> </h2>
-			<ul class="project-list">
+			<h2>I completed these projects while enrolled in Treehouse's Techdegree, Front End Web Development Course<img src="assets/icons/svg-icons/treehouse.svg" alt="Treehouse Logo" width="32px" data-aos="flip-left" data-aos-offset="-500" data-aos-delay="900" data-aos-duration="1200"> </h2>
+
+			<!--<ul class="project-list">
 				<li>Forms</li>
 				<li>Gallery</li>
 				<li>SaSS</li>
@@ -12,10 +13,9 @@
 				<li>Web App</li>
 				<li>API</li>
 				<li><a href="#gulp">Gulp</a></li>
-			</ul>
-			
-		</div>
-		<div class="down-arrow">
+			</ul>-->
+		</div><!--</.project-text>-->
+		<div class="down-arrow" data-aos="fade-up" data-aos-offset="-400" data-aos-delay="600" data-aos-duration="800">
 			<!--<a href="#treehouse-projects">-->
 			<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			width="96px" height="56px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
@@ -26,14 +26,14 @@
 				</g>
 			</svg>
 			<!--</a>-->
-		</div>
-	</div>
-</div>
+		</div><!--</.down-arrow>-->
+	</div><!--</.projects-back-->
+</div><!--</.projects-intro-->
 
 <div id="treehouse-projects" class="projects-cont">
 	
 	<ol class="treeHouse-projects-list">
-		<li id="forms" data-aos="fade-up">
+		<li id="forms" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
 			<div class="description-cont">
 				<h2>Forms
 				<span class="icon-done"></span>
@@ -68,7 +68,7 @@
 				</div><!--end accordion-wrap-->
 			</div><!--end description-cont-->
 		</li>
-		<li id="gallery" data-aos="fade-up">
+		<li id="gallery" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
 			<h2>Interactive Photo Gallery
 			<span>	
 				<span class="icon-done"></span>
@@ -83,7 +83,7 @@
 			</div>
 			<p><a href="http://billymelago.github.io/Project_4_photo_gallery_v1/">Live Site</a> <a href="https://github.com/billymelago/Project_4_photo_gallery_v1">View Code</a></p>
 		</li>
-		<li id="sass" data-aos="fade-up">
+		<li id="sass" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
 			<h2>CSS to SaSS</h2>
 			<p>Sass is an important tool in a modern Front End Web Developer’s toolbox. It's used by many developers to make styling web pages with CSS easier and faster. Use programming principles to refactor a standard CSS stylesheet to Sass by identifying repeating patterns, using variables, and adding mixins.</p>
 			<p><a href="http://billymelago.github.io/Project_5_sass/css_to_SaSS/">Live Site</a> <a href="https://github.com/billymelago/Project_5_sass/tree/master/css_to_SaSS">View Code</a></p>
@@ -145,16 +145,10 @@
 		} else if($(this).hasClass('more-info')) {
 				 	$(this).find($(".fa")).toggleClass('active');
 					
-				  } else if($(this).hasClass('more-info ui-accordion-header-collapsed')) {
-					$('h4').find($('.accordion-toggle')).toggleClass('ui-accordion-header-active ui-accordion-header-actcollapsedive');  
 				  }
-		
-		//remove active
-		//else add active
-		//$('.fa').removeClass('active');	
-		//$(this).find($(".fa")).toggleClass('active');
-		//$(this).find($(".fa")).toggleClass('fa-plus-circle fa-minus-circle');
-
+		if($(this).hasClass('more-info')) {
+			$('.panel').toggleClass('panel-active');
+		}
 	});
 </script>
 
