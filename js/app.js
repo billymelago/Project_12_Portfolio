@@ -51,7 +51,17 @@ $('#nav-projects').accordion({
 	icons: false
 });
 
+var prev = 0;
+var $window = $(window);
+var nav = $('nav');
+var header = $('.header');
 
+$window.on('scroll', function(){
+  var scrollTop = $window.scrollTop();
+  nav.toggleClass('hidden', scrollTop > prev);
+  header.toggleClass('hidden', scrollTop > prev);	
+  prev = scrollTop;
+});
 
 
 
