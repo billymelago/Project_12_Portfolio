@@ -316,7 +316,7 @@ p.scroll-text {
 
 .accordion-wrap .accordion {
 	line-height: .8;
-	width: 50%;
+	width: 90%;
 	margin: auto;
 	background: transparent; 
 	-webkit-transition: all 1s ease-out;
@@ -325,6 +325,7 @@ p.scroll-text {
 	border: none;
 	outline: none;
 }
+
 .accordion:hover {
 	color: #5FCF80;
 }
@@ -338,13 +339,26 @@ p.scroll-text {
 	-webkit-transform: rotate(135deg);
 	transform: rotate(135deg);
 }
+
 .accordion-wrap .ui-accordion-content {
-	padding: .5em;
+	padding: 0;
+	margin-bottom: .5em;
 	border: none;
+	overflow: hidden;
 }
 .fa {
 	float: right;
 	text-align: center;
+}
+
+.skill-list, .challenge-cont p {
+	padding-top: .2em;
+	font-size: .8em;
+	width: 80%;
+	margin: auto;
+}
+.btn-group {
+	margin-top: 1.2em;
 }
 .screenshot {
 	border: solid 2px #c3c3c3;
@@ -385,7 +399,6 @@ p.scroll-text {
 }
 .panel {
 	opacity: 0;
-	border-top: solid thin;
 	-webkit-transition: all .5s ease-in;
 	transition: all .5s ease-in;
 }
@@ -404,6 +417,16 @@ h2 span {
 }
 #forms {
 	margin-top: 0;
+}
+.live-btn {
+	background-color: transparent;
+	background-image: url(../assets/icons/liveSite.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: inline-block;
+	width: 50px;
+	height: 32px;
 }
 .git-btn {
 	border-radius: 50%;
