@@ -10,6 +10,7 @@ let $projectsHTML = $('#projects').hide();
 let $aboutHTML = $('#about');
 let $clientsHTML = $('#clients');
 let $contactHTML = $('#contact');
+let $footer = $('footer');
 
 //Animate menu icon and show nav links
 $('.menu-container').click(function() {
@@ -29,6 +30,7 @@ $('.nav-links li a').click(function(e) {
 	
 	$.get(`${$thisData}.html`, function(data){
 		if($thisData === 'projects') {
+			$footer.fadeOut();
 			$projectsHTML.html(data).fadeIn(1000);
 		} else if($thisData === 'about') {
 			$aboutHTML.html(data).fadeIn(1000);

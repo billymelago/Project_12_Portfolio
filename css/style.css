@@ -2,6 +2,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 body {
   	font-size: 16px;
   	font-family: 'Lato' sans-serif;
@@ -11,6 +12,7 @@ body {
 	background: -webkit-gradient(linear, right top, left bottom, from(#99dba0), to(#d8d8d8));
 	background: linear-gradient(to bottom left, #99dba0, #d8d8d8);/* Standard*/
 }
+
 a {
    	background-color: #E5EDF3;
     padding: 6px;
@@ -34,8 +36,6 @@ h2 {
 p {
     font-family: 'Lato', sans-serif;
 }
-
-
 ol, ul {
   	margin: 0;
   	padding: 0;
@@ -231,10 +231,13 @@ nav {
 
 /* PROJECTS PAGE
 ====================================*/
+
 #projects ol {
 	max-width: 100%;
-	margin: 70px auto 0;
-	padding: 0 .6em;
+	margin: 0 auto;
+	padding: 1em .6em;
+	background: -webkit-gradient(linear, right top, left bottom, from(#99dba0), to(#d8d8d8));
+	background: linear-gradient(to bottom left, #99dba0, #d8d8d8);/* Standard*/
 }
 .text-arrow {
 	padding: 1em;
@@ -430,7 +433,8 @@ h2 span {
 
 /* PROJECTS PAGE
 ====================================*/
-@media only screen and (max-device-width: 1024px) {
+/*On devices that are larger that 790px this happens*/
+@media only screen and (max-device-width: 760px) {
     .projects-intro {
         background-attachment: scroll;
     }
