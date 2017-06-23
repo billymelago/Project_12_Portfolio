@@ -9,7 +9,7 @@ let $navContainer = $('.nav-container').hide();
 let $projectsHTML = $('#projects').hide();
 let $aboutHTML = $('#about');
 let $clientsHTML = $('#clients');
-let $contactHTML = $('#contact');
+let $contactHTML = $('#contact').hide();
 let $footer = $('footer');
 
 //Animate menu icon and show nav links
@@ -37,7 +37,10 @@ $('.nav-links li a').click(function(e) {
 		} else if($thisData === 'clients') {
 			$clientsHTML.html(data).fadeIn(1000);
 		} else if($thisData === 'contact') {
-			$contactHTML.html(data).fadeIn(1000);
+			$projectsHTML.fadeOut(function(){
+				$contactHTML.html(data).fadeIn(1000);
+			});
+			
 		}
 	});
 	//Slide nav panel out of view

@@ -218,6 +218,7 @@ nav {
 
 .intro {
     font-size: 3.5em;
+	color: 	#344037;
 }
 .intro-cont {
 	display: -webkit-box;
@@ -339,6 +340,7 @@ p.scroll-text {
 	margin: 80px auto 0;
 }
 .treeHouse-projects-list li[data-aos] {
+	height: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -349,7 +351,7 @@ p.scroll-text {
 	-ms-flex-preferred-size: 100%;
 	flex-basis: 100%;
 	margin: 10px auto;
-	padding: 5px 10px 10px;
+	padding: 0 0 10px;
 	background-color: #fff;
 	border-radius: 8px;
 	-webkit-box-shadow: 5px 5px 15px 0px rgba(150, 150, 150, .4);
@@ -401,8 +403,6 @@ p.scroll-text {
 	font-size: .9em;
 	margin: -8px auto 0;
 }
-
-
 .skill-list, .challenge-cont p {
 	padding-top: .2em;
 	font-size: .8em;
@@ -419,10 +419,11 @@ p.scroll-text {
 	z-index: 1;
 }
 .btn-group div {
-	background-color: transparent;
+	border-radius: 8px 8px 0 0;
+	background-color: rgba(153,219,160,.8);
 	margin-left: .2em;
-	margin-bottom: .2em;
-	padding: .05em;
+	margin-bottom: 2px;
+	padding: .5em;
 	-webkit-transition: background .3s ease-in;
 	-webkit-transition: all .3s ease-in;
 	transition: all .3s ease-in;
@@ -430,20 +431,20 @@ p.scroll-text {
 .btn-group div a {
 	display: block;
 	margin: auto 0;
+	background-color: #fff;
 }
 .btn-text {
+	cursor: default;
 	font-family: 'Kaushan Script', cursive;
 	font-size: .6em;
 	color: #41a35f;
 	margin: 0;
-	opacity: 0;
+	opacity: 1;
 	text-align: center;
 	-webkit-transition: opacity .4s ease-in;
 	transition: opacity .4s ease-in;
 }
-.btn:hover + .btn-text {
-	opacity: 1;
-}
+
 .live-btn {
 	background-color: transparent;
 	background-image: url(../assets/icons/liveSite.png);
@@ -475,19 +476,46 @@ p.scroll-text {
 	-webkit-transform: rotate(360deg);
 	transform: rotate(360deg);
 }
-
 .screenshot {
+	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	border: solid 2px #c3c3c3;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border: solid 4px #c3c3c3;
+	border-radius: 8px;
 	margin: 1em auto;
 	padding: .5em;
 	width: 75%;
-	height: 175px; 
+	height: 175px;
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: 180%;
+}
+.title-cont {
+	min-height: 80px;
+	border-radius: 4px 4px 0 0;
+	background-color: #99dba0;
+}
+.title-cont h2 {
+	width: 100%;
+	line-height: 40px;
+	font-size: 1.4em;
+	padding: .5em;
+	margin-top: 0;
+	color: 	#fff;
+}
+#forms {
+	margin-top: 0;
 }
 .form {
 	background-image: url("../assets/screenshots/forms/full-page.png");
@@ -530,24 +558,59 @@ p.scroll-text {
 	right: 0;
 	bottom: 0;
 	position: absolute;
-	background-color: rgba(255,255,255,.3);
-	
+	border-radius: 8px;
+	background-color: rgba(255,255,255,.8);
 }
-#forms {
-	margin-top: 0;
-}
-
 
 .icon-done {
 	display: inline-block;
-	width: 28px;
-	height: 28px;
+	width: 75px;
+	height: 75px;
 	background-size: 100%;
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI%2BDQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTAwcHgiIGhlaWdodD0iNTAwcHgiIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MDAgNTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxjaXJjbGUgZmlsbD0iIzVGQ0Y4MCIgY3g9IjI1MCIgY3k9IjI1MCIgcj0iMjUwIi8%2BDQoJPGc%2BDQoJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yMjgsMzc2bC05NS05M2MtMTItMTEtMTItMzAsMC00MmMxMi0xMSwzMS0xMSw0MiwwbDQ5LDQ4bDk4LTExNmMxMS0xMiwyOS0xNCw0Mi00czE0LDI5LDQsNDFMMjI4LDM3NnoiDQoJCQkvPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K);
 }
-
-
-
+.exceed-icon {
+	color: #5fcf80;
+	z-index: 1;
+	margin-bottom: auto;
+}
+.meet-icon {
+	color: #3f8abf;
+	z-index: 1;
+	margin-bottom: auto;
+}
+.meets {
+	display: inline-block;
+	width: 75px;
+	height: 75px;
+}
+.meets svg {
+	fill: #3f8abf;
+}
+/* CONTACT PAGE
+====================================*/
+#contact {
+	height: 100vh;
+}
+.contact-cont {
+	height: 100%;
+	padding: 1em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.contact-cont div {
+	border-radius: 8px;
+	background-color: #fff;
+	padding: 1em;
+}
 
 
 
@@ -562,7 +625,7 @@ p.scroll-text {
 		width: 100%;
 	}
 	.screenshot {
-		height: 250px;
+		min-height: 250px;
 		max-width: 550px;
 		background-size: ;
 		background-position: center 20%;
