@@ -350,7 +350,7 @@ p.scroll-text {
 	flex-flow: column;
 	-ms-flex-preferred-size: 100%;
 	flex-basis: 100%;
-	margin: 10px auto;
+	margin: 10px auto 60px;
 	padding: 0 0 10px;
 	background-color: #fff;
 	border-radius: 8px;
@@ -410,6 +410,8 @@ p.scroll-text {
 	margin: auto;
 }
 .btn-group {
+	overflow: hidden;
+	height: 20px;
 	margin-top: auto;
 	margin-left: auto;
 	margin-bottom: -12px;
@@ -417,51 +419,46 @@ p.scroll-text {
 	display: -ms-flexbox;
 	display: flex;
 	z-index: 1;
+	-webkit-transition: height .3s ease-in;
+	transition: height .3s ease-in;
+}
+.btn-group:hover,
+.btn-group:focus {
+	height: 40%;
 }
 .btn-group div {
 	border-radius: 8px 8px 0 0;
 	background-color: rgba(153,219,160,.8);
 	margin-left: .2em;
 	margin-bottom: 2px;
-	padding: .5em;
+	padding: 0 .5em;
 	-webkit-transition: background .3s ease-in;
 	-webkit-transition: all .3s ease-in;
 	transition: all .3s ease-in;
 }
 .btn-group div a {
+	background-color: transparent;
+	padding: 0;
+}
+.btn-group img {
 	display: block;
-	margin: auto 0;
-	background-color: #fff;
+	margin: 0 auto;
 }
 .btn-text {
-	cursor: default;
 	font-family: 'Kaushan Script', cursive;
-	font-size: .6em;
+	font-size: .8em;
 	color: #41a35f;
-	margin: 0;
+	margin: 0 auto; 
 	opacity: 1;
 	text-align: center;
 	-webkit-transition: opacity .4s ease-in;
 	transition: opacity .4s ease-in;
 }
-
 .live-btn {
-	background-color: transparent;
-	background-image: url(../assets/icons/liveSite.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	display: inline-block;
-	width: 50px;
+	width: 32px;
 	height: 32px;
 }
 .git-btn {
-	border-radius: 50%;
-	background-color: transparent;
-	background-image: url(../assets/icons/svg-icons/github.svg);
-	background-repeat: no-repeat;
-	background-position: center;
-	display: inline-block;
 	width: 32px;
 	height: 32px;
 	opacity: 1;
@@ -470,12 +467,7 @@ p.scroll-text {
 	-webkit-transition-timing-function:cubic-bezier(.94,0,0.5,.91);
 	transition-timing-function:cubic-bezier(.94,0,0.5,.91);
 }
-.git-btn:hover {
-	cursor: pointer;
-	opacity: .5;
-	-webkit-transform: rotate(360deg);
-	transform: rotate(360deg);
-}
+
 .screenshot {
 	position: relative;
 	display: -webkit-box;
@@ -503,16 +495,29 @@ p.scroll-text {
 }
 .title-cont {
 	min-height: 80px;
-	border-radius: 4px 4px 0 0;
-	background-color: #99dba0;
+	border-radius: 8px 8px 0 0;
+	background-color: #344037;
+	border-bottom: solid 8px #969696;
 }
 .title-cont h2 {
-	width: 100%;
+	width: 80%;
 	line-height: 40px;
 	font-size: 1.4em;
 	padding: .5em;
 	margin-top: 0;
 	color: 	#fff;
+}
+.title-cont:after {
+	content: "";
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 15px;
+	right: 5px;
+	background-repeat: no-repeat;
+	background-image: url(../assets/icons/svg-icons/treehouse.svg);
+	background-color: ;
 }
 #forms {
 	margin-top: 0;
@@ -558,15 +563,17 @@ p.scroll-text {
 	right: 0;
 	bottom: 0;
 	position: absolute;
-	border-radius: 8px;
+	border-radius: 4px;
 	background-color: rgba(255,255,255,.8);
 }
 
 .icon-done {
 	display: inline-block;
-	width: 75px;
-	height: 75px;
-	background-size: 100%;
+	width: 20%;
+	height: 25%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI%2BDQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTAwcHgiIGhlaWdodD0iNTAwcHgiIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MDAgNTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxjaXJjbGUgZmlsbD0iIzVGQ0Y4MCIgY3g9IjI1MCIgY3k9IjI1MCIgcj0iMjUwIi8%2BDQoJPGc%2BDQoJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yMjgsMzc2bC05NS05M2MtMTItMTEtMTItMzAsMC00MmMxMi0xMSwzMS0xMSw0MiwwbDQ5LDQ4bDk4LTExNmMxMS0xMiwyOS0xNCw0Mi00czE0LDI5LDQsNDFMMjI4LDM3NnoiDQoJCQkvPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K);
 }
 .exceed-icon {
@@ -630,9 +637,14 @@ p.scroll-text {
 		background-size: ;
 		background-position: center 20%;
 	}
+	.btn-group:hover,
+	.btn-group:focus {
+		height: 30%;
+	}
 	.btn-group div:hover {
 		background-color: #fff;
 	}
+	
 }
 
 
