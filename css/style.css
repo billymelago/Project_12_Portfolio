@@ -562,6 +562,7 @@ p.scroll-text {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	cursor: pointer;
 	position: absolute;
 	border-radius: 4px;
 	background-color: rgba(255,255,255,.8);
