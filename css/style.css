@@ -436,6 +436,10 @@ p.scroll-text {
 	-webkit-transition: all .3s ease-in;
 	transition: all .3s ease-in;
 }
+.btn-group div:hover,
+.btn-group div:focus {
+	background-color: #fff;
+}
 .btn-group div a {
 	background-color: transparent;
 	padding: 0;
@@ -645,7 +649,8 @@ p.scroll-text {
 	.btn-group:focus {
 		height: 30%;
 	}
-	.btn-group div:hover {
+	.btn-group div:hover,
+	.btn-group div:focus {
 		background-color: #fff;
 	}
 	.screen-overlay:hover + .btn-group,
