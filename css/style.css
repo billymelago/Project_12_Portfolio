@@ -109,7 +109,7 @@ nav {
 .nav-links li>a {
 	padding: 1.2em;
 	font-family: 'Roboto', sans-serif;
-	color: #969696;
+	color: #344037;
 	background-color: transparent;
 	display: block;
 	width: 100%;
@@ -413,7 +413,7 @@ p.scroll-text {
 .btn-group {
 	position: relative;
 	overflow: hidden;
-	height: 20px;
+	height: 24px;
 	margin-top: auto;
 	margin-left: auto;
 	margin-bottom: -12px;
@@ -454,9 +454,7 @@ p.scroll-text {
 .btn-text {
 	font-family: 'Kaushan Script', cursive;
 	font-size: .8em;
-	color: #fff;
-	margin: 0 auto; 
-
+	margin: 0 auto 4px;
 	opacity: 1;
 	text-align: center;
 	-webkit-transition: opacity .4s ease-in;
@@ -591,9 +589,9 @@ p.scroll-text {
 .screen-overlay:focus + .btn-group {
 	height: 40%;
 }
-.screen-overlay:hover + .btn-group div,
-.screen-overlay:focus + .btn-group div {
-	background-color: #fff;
+.screen-overlay:hover + .btn-group div .btn-text,
+.screen-overlay:focus + .btn-group div .btn-text {
+	color: #fff;
 }
 .icon-done {
 	display: inline-block;
