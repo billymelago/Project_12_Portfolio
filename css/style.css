@@ -109,7 +109,7 @@ nav {
 .nav-links li>a {
 	padding: 1.2em;
 	font-family: 'Roboto', sans-serif;
-	color: #344037;
+	color: #969696;
 	background-color: transparent;
 	display: block;
 	width: 100%;
@@ -121,8 +121,9 @@ nav {
 .nav-links li>a:active {
 	color: #41a35f;
 }
-.nav-links li>a:hover {
-	color: #969696;
+.nav-links li>a:hover,
+.nav-links li>a:focus {
+	color: #3E474F;
 	letter-spacing: 2px;
 	font-weight: bold;
 	background-color: rgba(255,255,255,.2);
