@@ -185,10 +185,10 @@ nav {
 	height: 60px;
 	font-family: 'Kaushan Script', cursive;
 	font-size: 1.8em;
-	color: #344037;
+	color: #3E474F;
 	background-color: #fff;
 	border-radius: 10%;
-	border: solid 4px #344037;
+	border: solid 4px #3E474F;
 }
 
 
@@ -423,14 +423,14 @@ p.scroll-text {
 	-webkit-transition: height .3s ease-in;
 	transition: height .3s ease-in;
 }
-.btn-group:hover +,
+.btn-group:hover,
 .btn-group:focus {
 	height: 40%;
 }
 .btn-group div {
 	position: relative;
 	border-radius: 8px 8px 0 0;
-	background-color: rgba(153,219,160,1);
+	background-color: #5fcf80;
 	margin-left: .2em;
 	margin-bottom: 2px;
 	padding: 0 .5em;
@@ -453,8 +453,9 @@ p.scroll-text {
 .btn-text {
 	font-family: 'Kaushan Script', cursive;
 	font-size: .8em;
-	color: #41a35f;
+	color: #fff;
 	margin: 0 auto; 
+
 	opacity: 1;
 	text-align: center;
 	-webkit-transition: opacity .4s ease-in;
@@ -500,10 +501,22 @@ p.scroll-text {
 	background-size: 180%;
 }
 .title-cont {
+	position: relative;
 	min-height: 80px;
 	border-radius: 8px 8px 0 0;
-	background-color: #344037;
+	background-color: #3E474F;
 	border-bottom: solid 8px #969696;
+}
+.title-cont:before {
+	content: "";
+	position: absolute;
+	display: block;
+	border-bottom: solid 2px #d8d8d8;
+	bottom: 0;
+	top: 5px;
+	left: 0;
+	right: 0;
+	background: none;
 }
 .title-cont h2 {
 	width: 80%;
@@ -577,6 +590,10 @@ p.scroll-text {
 .screen-overlay:focus + .btn-group {
 	height: 40%;
 }
+.screen-overlay:hover + .btn-group div,
+.screen-overlay:focus + .btn-group div {
+	background-color: #fff;
+}
 .icon-done {
 	display: inline-block;
 	width: 20%;
@@ -598,8 +615,8 @@ p.scroll-text {
 }
 .meets {
 	display: inline-block;
-	width: 75px;
-	height: 75px;
+	width: 20%;
+	height: 25%;
 }
 .meets svg {
 	fill: #3f8abf;
