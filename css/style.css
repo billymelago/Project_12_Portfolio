@@ -43,6 +43,8 @@ ol, ul {
 	overflow: hidden;
 }
 footer {
+	display: block;
+	width: 100%;
     text-align: center;
     padding: 8px;
 }
@@ -87,7 +89,9 @@ nav {
 	background: linear-gradient(to bottom left, rgba(153,219,160,1), rgba(255,255,255,1));
 }
 .nav-links {
+	position: absolute;
 	padding: 2em 0;
+	width: 100%;
 	height: 100vh;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -641,8 +645,36 @@ p.scroll-text {
 	background-color: #fff;
 }
 .main-contact-cont {
+	display: block;
 	border-radius: 8px;
-	background-color: ;
+	position: relative;
+}
+.name-cont {
+	margin: 1em;
+	padding: 1em .5em;
+	border-radius: 4px;
+}
+.full-name {
+	font-weight: 900;
+	font-size: 1.4em;
+	color: #344037;
+}
+.name {
+	font-family: 'Kaushan Script', cursive;
+	text-decoration: underline;
+}
+
+.tagline, .full-name {
+	margin: 0;
+}
+.tagline {
+	line-height: 1;
+	font-size: 1.3em;
+	font-style: italic;
+}
+.billy {
+	font-weight: 900;
+	color: #41a35f;
 }
 .icon-cont {
 	max-width: 70%;
@@ -666,12 +698,18 @@ p.scroll-text {
 	-ms-flex-pack: center;
 	justify-content: center;
 }
-
+#mc_embed_signup {
+	display: block;
+	width: 100%;
+	margin: 4px;
+}
 form {
 	font-family: 'Lato', sans-serif;
-	
+	background-color: #d8d8d8;
+	padding-left: .8em;
 }
 .mc-field-group {
+	display: block;
 	padding: 4px;
 }
 label {
