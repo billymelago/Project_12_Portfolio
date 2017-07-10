@@ -31,7 +31,9 @@ $('.nav-links li a').click(function(e) {
 	$.get(`${$thisData}.html`, function(data){
 		if($thisData === 'projects') {
 			$footer.fadeOut();
-			$projectsHTML.html(data).fadeIn(1000);
+			$contactHTML.fadeOut(function() {
+				$projectsHTML.html(data).fadeIn(1000);
+			});
 		} else if($thisData === 'about') {
 			$aboutHTML.html(data).fadeIn(1000);
 		} else if($thisData === 'clients') {
