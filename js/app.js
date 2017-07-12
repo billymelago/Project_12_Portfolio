@@ -53,9 +53,10 @@ $('.nav-links li a').click(function(e) {
 
 $('.check-work').click(function(e) {
 	e.preventDefault();
+	$footer.fadeOut();
 	$('.main-cont').addClass('slide-out');
-	$.get('contact.html', function(data) {
-			$contactHTML.html(data).fadeIn(1000);
+	$.get('projects.html', function(data) {
+			$projectsHTML.html(data).fadeIn(1000);
 	})
 })
 
