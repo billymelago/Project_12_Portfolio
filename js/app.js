@@ -51,7 +51,13 @@ $('.nav-links li a').click(function(e) {
 	$('.menu-container').toggleClass("change");
 });
 
-
+$('.check-work').click(function(e) {
+	e.preventDefault();
+	$('.main-cont').addClass('slide-out');
+	$.get('contact.html', function(data) {
+			$contactHTML.html(data).fadeIn(1000);
+	})
+})
 
 
 $('#nav-projects').accordion({
@@ -72,7 +78,6 @@ $window.on('scroll', function(){
   header.toggleClass('hidden', scrollTop > prev);	
   prev = scrollTop;
 });
-
 
 
 

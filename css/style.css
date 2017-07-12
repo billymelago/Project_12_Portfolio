@@ -48,6 +48,9 @@ footer {
     text-align: center;
     padding: 8px;
 }
+footer p {
+	color: #969696;
+}
 
 
 /* MENU-CONTAINER  and HAMBURGER
@@ -131,6 +134,9 @@ nav {
 	letter-spacing: 2px;
 	font-weight: bold;
 	background-color: rgba(255,255,255,.2);
+}
+.no-show {
+	text-decoration: line-through;
 }
 .menu-container {
 	z-index: 1000;
@@ -237,6 +243,18 @@ nav {
 	-ms-flex-pack: center;
 	justify-content: center;
 }
+.check-work, .mailto-link {
+	display: inline-block;
+	font-size: 1.2em;
+	color: #969696;
+	background: transparent;
+	border: dotted 2px #fff;
+	-webkit-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+.main-links:hover {
+	background-color: #fff;
+}
 .hero {
 	width: 150px;
 	-ms-flex-item-align: center;
@@ -271,7 +289,6 @@ p.scroll-text {
 	letter-spacing: .5em;
 	cursor: pointer;
 	color: #344037;
-	text-transform: ;
 }
 
 .down-arrow svg {
@@ -384,7 +401,6 @@ p.scroll-text {
 	color: #344037;
 	-webkit-transition: all .5s;
 	transition: all .5s;
-	float: ;
 	margin-left: 1em;
 	text-align: center;
 }
@@ -539,7 +555,6 @@ p.scroll-text {
 	right: 5px;
 	background-repeat: no-repeat;
 	background-image: url(../assets/icons/svg-icons/treehouse.svg);
-	background-color: ;
 }
 #forms {
 	margin-top: 0;
@@ -670,7 +685,6 @@ p.scroll-text {
 .tagline {
 	line-height: 1;
 	font-size: 1.3em;
-	font-style: italic;
 }
 .billy {
 	font-weight: 900;
@@ -707,10 +721,17 @@ form {
 	font-family: 'Lato', sans-serif;
 	background-color: #d8d8d8;
 	padding-left: .8em;
+	border-radius: 8px;
 }
 .mc-field-group {
 	display: block;
 	padding: 4px;
+}
+.form-title {
+	padding-top: .5em;
+}
+.indicates-required span {
+	color: #969696;
 }
 label {
 	display: inline-block;
@@ -722,6 +743,12 @@ label {
 	background-color: #969696;
 	border-radius: 4px;
 	text-align: center;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+label:hover {
+	color: #969696;
+	background-color: #fff;
 }
 input {
 	outline: none;
@@ -738,13 +765,13 @@ input:focus {
 	background: rgba(153,219,160,.5);
 	
 }
-input::-webkit-input-placeholder {
+input:-webkit-input-placeholder {
 	color: #969696;
 }
 input:-ms-input-placeholder {
 	color: #969696;
 }
-input::placeholder {
+input:placeholder {
 	color: #969696;
 }
 .indicates-required {
@@ -753,7 +780,16 @@ input::placeholder {
 .fa-asterisk {
 	color: #99dba0;
 }
-
+.clear input {
+	background-color: #969696;
+	color: #fff;
+	border-radius: 4px;
+}
+input[type="submit"]:hover {
+	color: #969696;
+	background-color: #fff;
+	text-decoration: underline;
+}
 
 
 
@@ -774,17 +810,21 @@ input::placeholder {
 }
 .ci-cont p {
 	text-transform: lowercase;
-	margin: 0;
+	margin: 5px;
+	padding: 2px;
 	cursor: default;
 	font-size: .75em;
 	font-weight: 900;
 	font-family: 'Lato', sans-serif;
 	color: #41a35f;
-	letter-spacing: -.4px;
 	text-align: center;
+	border-radius: 4px;
+	-webkit-transition: all .3s ease-in;
+	transition: all .3s ease-in;
 }
 a.contact-icon:hover + p {
-	color: #3E474F;
+	color: #fff;
+	background-color: rgba(153,219,160,1);
 }
 .social {
 	text-indent: -9999px;
@@ -824,16 +864,26 @@ a.email {
 ====================================*/
 /*On devices that are larger that 790px, this happens*/
 @media only screen and (min-device-width: 768px) {
+	.hero {
+		width: 210px;
+		-ms-flex-item-align: center;
+		align-self: center;
+	}
+	.hero img {
+		border-radius: 50%;
+		border: solid 6px #fff;
+	}
+	
+	
     .projects-intro {
         background-attachment: fixed;
     }
 	#projects ol {
-		width: 100%;
+		width: 80%;
 	}
 	.screenshot {
 		min-height: 250px;
 		max-width: 550px;
-		background-size: ;
 		background-position: center 20%;
 	}
 	.btn-group:hover,
@@ -850,11 +900,18 @@ a.email {
 	}
 	
 	.icon-cont {
+		display: block;
+		float: left;
+		margin-right: 2em;
 		max-width: 100%;
 	}
 	.contact-icon {
 		width: 75px;
 		height: 75px;
+	}
+	#mc_embed_signup {
+		width: 50%;
+		display: inline-block;
 	}
 }
 
