@@ -639,6 +639,9 @@ p.scroll-text {
 .meets svg {
 	fill: #3f8abf;
 }
+
+
+
 /* CONTACT PAGE
 ====================================*/
 #contact {
@@ -671,24 +674,27 @@ p.scroll-text {
 }
 .full-name {
 	font-weight: 900;
-	font-size: 1.4em;
+	font-size: 1em;
 	color: #344037;
 }
 .name {
 	font-family: 'Kaushan Script', cursive;
-	text-decoration: underline;
+	text-decoration: line-through;
+	color: #99dba0;
 }
 
 .tagline, .full-name {
 	margin: 0;
 }
 .tagline {
+	font-size: 1em;
 	line-height: 1;
-	font-size: 1.3em;
 }
 .billy {
+	font-size: 1.2em;
 	font-weight: 900;
 	color: #41a35f;
+	font-family: 'Kaushan Script', cursive;
 }
 .icon-cont {
 	max-width: 70%;
@@ -897,6 +903,16 @@ a.email {
 	.screen-overlay:hover + .btn-group,
 	.screen-overlay:focus + .btn-group {
 		height: 30%;
+	}
+	
+	.full-name {
+		font-size: 1.8em;
+	}
+	.tagline {
+		font-size: 2.2em;
+	}
+	.billy {
+		font-size: 1.2em;
 	}
 	
 	.icon-cont {
