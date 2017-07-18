@@ -103,9 +103,9 @@ nav {
 	-webkit-box-direction: normal;
 	-ms-flex-flow: column;
 	flex-flow: column;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 .nav-links li {
 	line-height: 2;
@@ -269,6 +269,14 @@ nav {
 
 /* PROJECTS PAGE
 ====================================*/
+.projects-text {
+	max-width: 100%;
+	
+}
+.projects-text h2 {
+	display: none;
+}
+
 .projects-cont {
 	background: -webkit-gradient(linear, right top, left bottom, from(#99dba0), to(#d8d8d8));
 	background: linear-gradient(to bottom left, #99dba0, #d8d8d8);/* Standard*/
@@ -334,6 +342,33 @@ p.scroll-text {
 	margin-top: 80px;
 	padding: 0 5px;
 }
+.skills-cont {
+	height: auto;
+}
+.skills-list {
+	height: 100%;
+	width: 90%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.skills-list li {
+	-ms-flex-preferred-size: 100px;
+	flex-basis: 100px;
+}
+.skills-list li img {
+	display: block;
+	width: 100%;
+	margin: auto;
+}
+
 .project-list {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -468,8 +503,10 @@ p.scroll-text {
 	padding: 0;
 }
 .btn-group img {
-	display: block;
+	display: inline-block;
 	margin: 0 auto;
+	width: 32px;
+	height: 32px;
 }
 .btn-text {
 	font-family: 'Kaushan Script', cursive;
@@ -481,12 +518,9 @@ p.scroll-text {
 	transition: opacity .4s ease-in;
 }
 .live-btn {
-	width: 32px;
-	height: 32px;
+
 }
 .git-btn {
-	width: 32px;
-	height: 32px;
 	opacity: 1;
 	-webkit-transition: all .5s;
 	transition: all .5s;
@@ -556,6 +590,8 @@ p.scroll-text {
 	background-repeat: no-repeat;
 	background-image: url(../assets/icons/svg-icons/treehouse.svg);
 }
+
+
 #forms {
 	margin-top: 0;
 }
@@ -674,10 +710,11 @@ p.scroll-text {
 }
 .full-name {
 	font-weight: 900;
-	font-size: 1em;
+	font-size: 1.2em;
 	color: #344037;
 }
 .name {
+	display: block;
 	font-family: 'Kaushan Script', cursive;
 	text-decoration: line-through;
 	color: #99dba0;
@@ -697,7 +734,6 @@ p.scroll-text {
 	font-family: 'Kaushan Script', cursive;
 }
 .icon-cont {
-	max-width: 70%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -757,6 +793,8 @@ label:hover {
 	background-color: #fff;
 }
 input {
+	width: 70%;
+	height: 50px;
 	outline: none;
 	margin: 0 .2em .2em;
 	padding: .5em;
@@ -879,9 +917,17 @@ a.email {
 		border-radius: 50%;
 		border: solid 6px #fff;
 	}
-	
+	.projects-back {
+		margin: 60px 0;
+		padding: 2em;
+		height: 500px;
+	}
+	.down-arrow {
+		display: none;
+	}
 	
     .projects-intro {
+		height: auto;
         background-attachment: fixed;
     }
 	#projects ol {
@@ -903,6 +949,9 @@ a.email {
 	.screen-overlay:hover + .btn-group,
 	.screen-overlay:focus + .btn-group {
 		height: 30%;
+	}.btn-group img {
+		width: 50px;
+		height: 50px;
 	}
 	
 	.full-name {

@@ -39,6 +39,7 @@ $('.nav-links li a').click(function(e) {
 		} else if($thisData === 'clients') {
 			$clientsHTML.html(data).fadeIn(1000);
 		} else if($thisData === 'contact') {
+			$footer.fadeOut();
 			$projectsHTML.fadeOut(function(){
 				$contactHTML.html(data).fadeIn(1000);
 			});
