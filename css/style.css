@@ -264,7 +264,18 @@ nav {
 	border-radius: 50%;
 	border: solid 6px #fff;
 }
-
+.contact-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
 
 
 /* PROJECTS PAGE
@@ -274,9 +285,12 @@ nav {
 	
 }
 .projects-text h2 {
-	display: none;
+	font-size: 1em;
 }
-
+.particular {
+	margin: 6px 0 0;
+	padding: 0;
+}
 .projects-cont {
 	background: -webkit-gradient(linear, right top, left bottom, from(#99dba0), to(#d8d8d8));
 	background: linear-gradient(to bottom left, #99dba0, #d8d8d8);/* Standard*/
@@ -339,6 +353,7 @@ p.scroll-text {
 	width: 32px;
 }
 .projects-text {
+	height: 100%;
 	margin-top: 80px;
 	padding: 0 5px;
 }
@@ -346,6 +361,7 @@ p.scroll-text {
 	height: auto;
 }
 .skills-list {
+	margin: ;
 	height: 100%;
 	width: 90%;
 	display: -webkit-box;
@@ -355,17 +371,18 @@ p.scroll-text {
 	-webkit-box-direction: normal;
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+	-ms-flex-line-pack: center;
+	align-content: center;
 }
 .skills-list li {
-	-ms-flex-preferred-size: 100px;
-	flex-basis: 100px;
+	-ms-flex-preferred-size: 20%;
+	flex-basis: 20%;
+	padding: .5em;
 }
 .skills-list li img {
 	display: block;
 	width: 100%;
+	max-height: 60px;
 	margin: auto;
 }
 
@@ -499,6 +516,9 @@ p.scroll-text {
 	background-color: #fff;
 }
 .btn-group div a {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
 	background-color: transparent;
 	padding: 0;
 }
@@ -703,6 +723,10 @@ p.scroll-text {
 	border-radius: 8px;
 	position: relative;
 }
+.contact-cont-2 {
+	
+}
+
 .name-cont {
 	margin: 1em;
 	padding: 1em .5em;
@@ -741,19 +765,6 @@ p.scroll-text {
 	-ms-flex-pack: center;
 	justify-content: center;
 }
-
-.contact-list {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-ms-flex-flow: row nowrap;
-	flex-flow: row nowrap;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-}
 #mc_embed_signup {
 	display: block;
 	width: 100%;
@@ -763,6 +774,7 @@ form {
 	font-family: 'Lato', sans-serif;
 	background-color: #d8d8d8;
 	padding-left: .8em;
+	padding-bottom: 1em;
 	border-radius: 8px;
 }
 .mc-field-group {
@@ -828,11 +840,13 @@ input:placeholder {
 	background-color: #969696;
 	color: #fff;
 	border-radius: 4px;
+	margin-left: 30px;
 }
 input[type="submit"]:hover {
 	color: #969696;
 	background-color: #fff;
 	text-decoration: underline;
+	
 }
 
 
@@ -907,7 +921,7 @@ a.email {
 /* MEDIA QUERIES
 ====================================*/
 /*On devices that are larger that 790px, this happens*/
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-device-width: 767px) {
 	.hero {
 		width: 210px;
 		-ms-flex-item-align: center;
@@ -918,7 +932,7 @@ a.email {
 		border: solid 6px #fff;
 	}
 	.projects-back {
-		margin: 60px 0;
+		margin: 0px 0;
 		padding: 2em;
 		height: 500px;
 	}
@@ -949,9 +963,10 @@ a.email {
 	.screen-overlay:hover + .btn-group,
 	.screen-overlay:focus + .btn-group {
 		height: 30%;
-	}.btn-group img {
+	}
+	.btn-group img {
 		width: 50px;
-		height: 50px;
+		height: 50x;
 	}
 	
 	.full-name {
@@ -963,7 +978,18 @@ a.email {
 	.billy {
 		font-size: 1.2em;
 	}
-	
+	.contact-cont-2 {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+}
 	.icon-cont {
 		display: block;
 		float: left;
