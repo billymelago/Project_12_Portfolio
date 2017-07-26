@@ -360,8 +360,25 @@ p.scroll-text {
 .skills-cont {
 	height: auto;
 }
+.skills-list-head {
+	padding: 0 .8em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+}
+.skills-list-head li {
+	width: 40px;
+	max-height: 40px;
+	margin: 0 8px;
+}
+.skills-list-head li img {
+	max-height: 40px;
+}
 .skills-list {
-	margin: ;
 	height: 100%;
 	width: 90%;
 	display: -webkit-box;
