@@ -381,7 +381,7 @@ p.scroll-text {
 }
 .skills-list-head li img {
 	max-height: 40px;
-	width: 100%;
+	max-width: 40px;
 }
 .skills-list {
 	height: 100%;
