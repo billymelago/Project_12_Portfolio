@@ -59,8 +59,7 @@ $('.check-work').click(function(e) {
 	$.get('projects.html', function(data) {
 			$projectsHTML.html(data).fadeIn(1000);
 	})
-})
-
+});
 
 $('#nav-projects').accordion({
 	collapsible: "true",
@@ -76,7 +75,7 @@ var header = $('.header');
 
 $window.on('scroll', function(){
   var scrollTop = $window.scrollTop();
-  nav.toggleClass('hidden', scrollTop > prev);
+  nav.toggleClass('hidden', scrollTop > prev );
   header.toggleClass('hidden', scrollTop > prev);	
   prev = scrollTop;
 });

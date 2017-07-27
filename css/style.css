@@ -292,15 +292,6 @@ nav {
 	margin-top: 50px;
 	padding: 0 5px;
 }
-.idk {
-	background: none;
-	text-decoration: underline;
-	-webkit-transition: all .3s ease-in;
-	transition: all .3s ease-in;
-}
-.idk:hover {
-	color: #fff;
-}
 .projects-text h2 {
 	display: none;
 	line-height: 1.5;
@@ -397,8 +388,8 @@ p.scroll-text {
 	margin: 0 8px;
 }
 .skills-list-head li img {
-/*	max-height: 40px;
-	width: 100%;*/
+	max-height: 40px;
+	width: ;
 }
 .skills-list {
 	height: 100%;
@@ -1104,10 +1095,17 @@ a.email {
 }
 
 @media only screen and (min-device-width: 1023px) {
+	.intro-cont {
+		padding-left: 1em;
+	}
 	.intro-lg {
 		display: inline-block;
 		font-family: 'Kaushan Script', cursive;
 		font-size: .6em;
+		font-weight: 400;
+		color: #fff;
+		padding-right: 1em;
+		display: block;
 	}
 	
 	.contact-cont-2 {
